@@ -1,0 +1,129 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.HomePageContainer{
+    background: transparent;
+    padding: 0px 0 30px 0;
+}
+.homeCotainer {
+    min-height: 50vh;
+    // border: 1px solid red;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media screen and (max-width:$medium_width){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image {
+        img {
+            float: right;
+            // max-width: 70vw;
+            min-height: 80vh;
+        }
+        @media screen and (max-width: $medium_width) {
+            display: none;
+        }
+    }
+    .content{
+        padding: 50px;
+        @media screen and (max-width: $medium_width) {
+            padding: 20px;
+        }
+
+        h1{
+            font-size: 6em;
+            font-weight: bolder;
+            color: #4641d3;
+            @media screen and (max-width: $medium_width) {
+                font-size: 3em;
+            }
+        }
+        p{
+            color: #A5A5A5;
+            margin: 20px 0;
+        }
+        button{
+            border: 2px solid #4641d3;
+            border-radius: 20px;
+            font-size: 0.5em;
+            padding: 10px 40px;
+            color: inherit;
+            background-color: #4641d3;
+        }
+        .links{
+            // @include content-between;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            .link{
+                @include content-center;
+                padding: 5px;
+                margin: 30px;
+                border-radius: 50%;
+                background-color:#4641d3;
+                width: 50px;
+                height: 50px;
+                img{
+                    width: 50px
+                }
+                @media screen and (max-width:$medium_width){
+                    width: 30px;
+                margin: 10px;
+                    height: 30px;
+                    img{
+                        width: 30px
+                    }
+                }
+            }
+        }
+    }
+}
+
+.containerHeadings {
+    @include content-center;
+    flex-direction: column;
+    font-size: 72px;
+    margin: 20px;
+    h1 {
+        font-size: 1.5em;
+        // text-shadow: 2px 2px  red;
+        color: transparent;
+        -webkit-text-stroke: 1px #afd2fa86;
+        margin-bottom: -70px;
+    }
+    h2 {
+        font-size: 0.75em;
+        color: #4641d3;
+        text-align: center;
+        max-width: 700px;
+        line-height: 1em;
+    }
+    @media screen and (max-width: $medium_width) {
+        font-size: 30px;
+        h1 {
+            margin-bottom: -30px;
+        }
+    }
+}
+
+.dark {
+    .HomePageContainer,.HomeServiceContainer,.AboutHeadingContainer{
+        background: #F2F5FA;
+    }
+    .containerHeadings {
+        h1 {
+            -webkit-text-stroke: 3px #afd2fa86;
+        }
+    }
+    .homeCotainer{
+        .content{
+            button{
+                background-color: transparent;
+            }
+        }
+    }
+}

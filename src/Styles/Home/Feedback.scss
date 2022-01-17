@@ -1,0 +1,95 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.FeedbackContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media screen and (max-width: $medium_width) {
+        display: flex;
+    }
+    .image {
+        img {
+            float: right;
+            height: 90vh;
+        }
+        @media screen and (max-width: $medium_width) {
+            display: none;
+        }
+    }
+    .content {
+        .containerHeadings {
+            align-items: flex-start;
+            h2 {
+                text-align: left;
+            }
+            @media screen and (max-width: $medium_width) {
+                align-items: center;
+                h2{
+                    text-align: center
+                }
+            }
+        }
+        @include content-center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        font-size: 1.1em;
+        @media screen and (max-width: $medium_width) {
+            padding: 10px;
+        }
+        img {
+            max-width: 70px;
+        }
+        h3 {
+            color: #4641d3;
+            max-width: 70%;
+            margin: 20px 0;
+        }
+        p {
+            max-width: 90%;
+            font-size: 0.8em;
+            margin: 10px;
+            font-family: Helvetica, sans-serif;
+            color: #7e7e7e;
+        }
+
+        @media screen and (max-width: $medium_width) {
+            // display: none;
+
+            align-items: center;
+        }
+    }
+}
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    .icon {
+        background: #4641d3;
+        padding: 10px;
+        @include content-center;
+        border-radius: 50%;
+    }
+    .details {
+        margin: 10px 10px 10px 30px;
+        p {
+            color: #4641d3;
+        }
+    }
+}
+.arrows {
+    @include content-between;
+    width: 100px;
+    margin: 20px;
+    .arrow {
+        background-color: #4641d3;
+        padding: 5px;
+        @include content-center;
+        border-radius: 50%;
+        svg {
+            width: 70%;
+        }
+    }
+}

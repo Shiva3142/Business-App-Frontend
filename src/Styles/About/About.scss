@@ -1,0 +1,188 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.AboutWorkContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+
+    @media screen and (max-width: $large_size) {
+        align-items: center;
+    }
+    @media screen and (max-width: $medium_width) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containerHeadings {
+        font-size: 3.9em;
+        @media screen and (max-width: $large_size) and (min-width: $medium_width) {
+            font-size: 3em;
+            h1 {
+                margin-bottom: -50px;
+            }
+        }
+        @media screen and (max-width: $medium_width) {
+            font-size: 2em;
+            h1 {
+                margin-bottom: -30px;
+            }
+        }
+    }
+    .descriptionContainer {
+        padding: 20px 30px;
+        h5 {
+            font-size: 1.2em;
+            margin: 30px 0;
+        }
+        p {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            font-size: 0.9em;
+            width: 90%;
+        }
+        @media screen and (max-width: $mobile_limit) {
+            padding: 20px 5px;
+            font-size: 0.8em;
+        }
+    }
+}
+
+.workAboutContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .work {
+        padding: 20px;
+        text-align: center;
+        h1 {
+            font-size: 80px;
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+        }
+    }
+}
+
+.AboutSkillsContainer {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media screen and (max-width: $medium_width) {
+        display: flex;
+    }
+    .image {
+        img {
+            float: left;
+            height: 90vh;
+        }
+        @media screen and (max-width: $medium_width) {
+            display: none;
+        }
+    }
+    .content {
+        .containerHeadings {
+            @media screen and (min-width: $large_size) {
+                // font-size: 3.5em;
+            }
+            h2 {
+                font-size: 0.5em;
+            }
+        }
+        @include content-center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        font-size: 1.1em;
+        @media screen and (max-width: $medium_width) {
+            padding: 10px;
+        }
+        p {
+            max-width: 90%;
+            font-size: 0.8em;
+            margin: 10px;
+            font-family: Helvetica, sans-serif;
+            color: #7e7e7e;
+        }
+
+        @media screen and (max-width: $medium_width) {
+            // display: none;
+
+            align-items: center;
+        }
+        .skillsMeters {
+            width: 90%;
+
+            .meterdetails {
+                padding: 10px 20px;
+
+                .metervalue {
+                    meter {
+                        width: 100%;
+                        height: 30px;
+                    }
+                    meter::-webkit-meter-optimum-value {
+                        background: #4641d3;
+                    }
+
+                    meter::-moz-meter-bar {
+                        background: #4641d3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ExpertDetailsConteiner {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-evenly;
+    // align-items: flex-start;
+.aboutGrid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+    @media screen and (max-width:$medium_width) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+.AboutFlex1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+    .containerHeadings {
+        max-width: 450px;
+    }
+    .TeamMember {
+        margin: 10px;
+        h1{
+            padding: 20px;
+        }
+        h6{
+            padding: 0px 20px;
+            color: #4641d3;
+            font-size: 1.3em;
+        }
+        .container {
+            margin: 20px;
+            width: 300px;
+            min-height: 500px;
+            border: 1px solid gray;
+            border-radius: 0 0 0px 50px;
+        }
+    }
+}
+
+.dark {
+    .workAboutContainer {
+        .work {
+            h1 {
+                -webkit-text-stroke: 2px #4641d3;
+            }
+        }
+    }
+}

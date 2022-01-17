@@ -1,0 +1,82 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+header {
+    @include content-between;
+    .logo {
+        @include content-center;
+        img {
+            width: 90px;
+        }
+        .navbarOptionBtn{
+            @media screen and (min-width:$medium_width){
+                display: none;
+            }
+        }
+    }
+    nav {
+        a {
+            color: #7d91e0;
+        }
+    }
+    .desktopNav {
+        min-width: 500px;
+        @include content-between;
+        @media screen and (max-width: $medium_width) {
+            display: none;
+        }
+    }
+    .themeTogglebutton {
+        @include content-center;
+        button {
+            color: #7d91e0;
+        }
+        .togglebutton {
+            cursor: pointer;
+            width: 50px;
+            height: 25px;
+            border-radius: 30px;
+            background-color: gray;
+            // display: flex;
+            padding: 1px;
+            align-items: center;
+            position: relative;
+            #togglebar {
+                position: absolute;
+                left: 26px;
+                // right: 0;
+                border-radius: 50%;
+                height: 23px;
+                width: 23px;
+                background-color: white;
+                transition: left 0.3s;
+            }
+        }
+    }
+}
+
+#mobileNav {
+    min-width: 200px;
+    position: fixed;
+    // display: none;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    transition: left 0.5s;
+    z-index: 100000;
+    #hideNavBar{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .links{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        a{
+            padding: 15px 10px;
+            text-align: center;
+        }
+    }
+    // justify-content: ;
+}

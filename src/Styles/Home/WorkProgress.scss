@@ -1,0 +1,60 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.WorkProgressContainer{
+    background:#4641D3;
+    margin: 40px 0;
+    .Heading{
+        @include content-center;
+        flex-direction: column;
+        h1{
+            margin: 30px 0;
+            font-size: 3em;
+            @media screen and (max-width: $medium_width) {
+                    font-size: 2em;
+            }
+            @media screen and (max-width: $mobile_limit) {
+                    font-size: 1.2em;
+            }
+        }
+        p{
+            max-width: 600px;
+            text-align: center;
+            color: #D6D6D6;
+            font-family: arial !important;
+            font-weight: 300;
+            @media screen and (max-width: $medium_width) {
+                font-size: 0.9em;
+        }
+        }
+    }
+}
+
+.itemcontainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .item{
+        padding: 30px;
+        margin: 30px;
+        max-width: 250px;
+        @include content-center;
+        flex-direction: column;
+        img{
+            background: #FFFFFF80;
+            border-radius: 20px;
+            max-width: 100px;
+            margin: 20px;
+            padding: 20px;
+        }
+        h2{
+            color: white;
+        }
+        p{
+            color: #F9F9F9;
+            font-size: 0.6em;
+            margin: 30px 0;
+            text-align: center;
+        }
+    }
+}

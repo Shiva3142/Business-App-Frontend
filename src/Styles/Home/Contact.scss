@@ -1,0 +1,100 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.ContactContainer {
+    min-height: 75vh;
+    background: #4641d3;
+    padding: 30px;
+    color: white;
+    @include content-center;
+    @media screen and (max-width:$mobile_limit){
+        padding: 10px;
+    
+    }
+    .ContactHeader{
+        @include content-center;
+        align-items: flex-start;
+        height: 100%;
+        padding: 50px;
+        flex-direction: column;
+        h1{
+            font-weight: bolder;
+            font-size: 3em;
+            margin: 30px 0;
+        }
+        p{
+            width: 70%;
+            font-size: 1.3em;
+            // padding-right: 50px ;
+            color: #D6D6D6;
+
+        }
+        @media screen and (max-width:$medium_width){
+            padding: 30px;
+            h1{
+                font-size: 2em;
+            }
+            
+        }
+        @media screen and (max-width:$mobile_limit){
+            padding: 10px;
+            h1{
+                font-size: 1.5em;
+            }
+            p{
+                font-size: 0.8em;
+                width: 90%;
+            }
+        }
+    }
+    .inputContainer {
+        display: flex;
+        // align-items: center;
+        justify-content:center ;
+        height: 100%;
+        flex-direction: column;
+        .input{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            label{
+                font-size: 1.3em;
+                margin: 10px;
+            }
+            input{
+                padding: 20px;
+                background: transparent;
+                border: 2px solid white;
+                color: white;
+                border-radius: 15px;
+
+            }
+        }
+        .messageBox{
+            display: flex;
+            flex-direction: column;
+            // padding: 20px;
+            margin: 10px;
+            label{
+                font-size: 1.3em;
+                margin: 10px;
+            }
+            textarea{
+                background: transparent;
+                border: 2px solid white;
+                min-height: 120px;
+                border-radius: 15px;
+                padding: 20px;
+            }
+        }
+        button{
+            font-size: 0.5em;
+            padding: 10px 40px;
+            background-color: #FFFFFF;
+            color: #4641d3;
+            font-weight: 600;
+            margin: 10px;
+            border-radius: 12px;
+        }
+    }
+}

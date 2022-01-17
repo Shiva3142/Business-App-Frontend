@@ -1,0 +1,109 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.ServicesContainer {
+    .containerHeadings {
+        margin: 50px 0;
+    }
+    .servicesContainer {
+        .service {
+            border: 2.5px solid #4641d370;
+            padding: 40px 20px;
+            @include content-center;
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 21px;
+            h1 {
+                color: #4641d3;
+            }
+            img {
+                max-width: 70px;
+            }
+            p {
+                margin: 20px 0;
+            }
+        }
+        .leftservices {
+            height: 100%;
+            p {
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                color: #5f5f5f;
+            }
+            li {
+                margin-left: 20px;
+                list-style: disc;
+                font-weight: 300;
+            }
+            h4 {
+                margin: 15px 0;
+                @include content-center;
+                svg {
+                    width: 20px;
+                    margin: 0 30px;
+                }
+            }
+        }
+    }
+    .DevelopmentContainer {
+        margin: 50px 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .service {
+            display: flex;
+            max-width: 550px;
+            padding: 20px;
+            border-radius: 25px;
+            margin: 30px 10px;
+            box-shadow: -5px -10px 25px #FCDDE157;
+            .image{
+                @include content-center;
+                padding: 10px 20px;
+            }
+            img{
+                max-width: 150px;
+                @media screen and (max-width:$medium_width){
+                    max-width: 80px;
+                }
+            }
+            p {
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                color: #5f5f5f;
+                margin: 20px 0;
+            }
+            h2{
+                font-weight: bolder;
+                color: black;
+            }
+            .description{
+                @include content-center;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                button{
+                    font-size: 0.7em;
+                    padding: 10px 30px;
+                    color: black;
+                    border-radius: 10px;
+                    border: 2px solid #4641D3;
+                }
+                @media screen and (max-width:$medium_width){
+                    font-size: 0.8em;;
+                }
+            }
+
+        }
+    }
+}
+
+.dark {
+    .ServicesContainer {
+        .service {
+            h1 {
+                color: black;
+            }
+        }
+    }
+}
