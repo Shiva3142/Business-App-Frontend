@@ -1,0 +1,246 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+// contact button
+
+.ContactUsButton {
+    background: #4641d3;
+    padding: 100px 50px;
+    @include content-between;
+    @media screen and (max-width: $medium_width) {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .heading {
+        max-width: 70%;
+        padding: 20px;
+        h1 {
+            font-size: 60px;
+            margin: 20px 0;
+            color: white;
+        }
+        p {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            font-size: 1em;
+            color: #cacaca;
+            width: 90%;
+        }
+    }
+    .contactButton {
+        margin: 50px 0;
+        @include content-center;
+        min-width: 200px;
+        button {
+            background-color: white;
+            border: 1px solid #4641d3;
+            padding: 20px 50px;
+            border-radius: 20px;
+            font-size: 1.3em;
+            a {
+                color: #4641d3;
+            }
+        }
+    }
+    @media screen and (max-width: $medium_width) {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 20px 5px;
+        .heading {
+            padding: 20px 0;
+            max-width: 95%;
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.CareerDescriptionContainer {
+    .DescriptionNavigation {
+        .buttonContainer {
+            display: flex;
+            margin: 30px;
+            // div{
+            // text-align: center;
+            input {
+                display: none;
+            }
+            input:checked ~ label {
+                background-color: #4641d3;
+                z-index: 1;
+                color: white;
+            }
+            // }
+
+            .button {
+                position: relative;
+                display: inline-block;
+                width: 150px;
+                background-color: #dfdeea94;
+                border-radius: 30px;
+                padding: 10px 30px;
+                margin-left: -20px;
+                text-align: center;
+                color: #4641d3;
+                z-index: 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.JobItem {
+    padding: 30px 0;
+    margin: 30px 0;
+    background-color: #4641d3;
+
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 3px 20px #00000040;
+
+    .JobPreview {
+        @include content-between;
+        padding: 30px;
+        .jobHeader {
+            .jobplace {
+                margin: 15px 0;
+                span {
+                    font-size: 0.7em;
+                    padding: 5px 1.5em;
+                }
+                span:first-child {
+                    background-color: white;
+                    color: #4641d3;
+                }
+            }
+            h2 {
+                color: white;
+                margin: 20px 0;
+            }
+        }
+        .jobdescription {
+            max-width: 30%;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            font-size: 1em;
+            color: #aaa9a9;
+            margin: 0 20px;
+        }
+        .jobdetailsExpantionButton {
+            button {
+                padding: 10px 30px;
+                background-color: white;
+                color: #4641d3;
+            }
+        }
+        .salaryContainer {
+            p {
+                margin-bottom: 15px;
+                font-size: 0.8em;
+            }
+            span {
+                font-size: 0.8em;
+            }
+        }
+    }
+    @media screen and (max-width: $medium_width) {
+        .JobPreview {
+            flex-direction: column;
+            align-items: flex-start;
+            .jobdescription {
+                max-width: 90%;
+                margin: 20px 0;
+            }
+            .salaryContainer {
+                margin: 20px 0;
+            }
+        }
+    }
+    .jobDescription {
+        position: relative;
+        max-height: 0px;
+        overflow: hidden;
+        padding: 0 20px;
+        transition: max-height 0.5s;
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 200;
+        }
+        p {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            font-size: 0.8em;
+            max-width: 95%;
+            color: #aaa9a9;
+            margin: 30px 0;
+        }
+        ul li {
+            list-style: disc;
+            margin: 10px 0;
+            margin-left: 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 0.15em;
+        }
+        .arrowup{
+            margin: 100px 0 0 0;
+            @include content-center;
+            svg{
+                transform: rotate(90deg);
+                font-size: 30px;
+            }
+        }
+        .applybutton{
+            position: absolute;
+            right: 20px;
+            bottom: 50px;
+            button{
+                padding: 10px 40px;
+                background-color: white;
+                color: #4641d3;
+            }
+        }
+    }
+}
+
+.dark {
+    .JobItem {
+        background-color: white;
+        .JobPreview {
+            .jobHeader {
+                .jobplace {
+                    span:first-child {
+                        background-color: #4641d3;
+                        color: white;
+                    }
+                }
+                h2 {
+                    color: #4641d3;
+                }
+            }
+            .jobdetailsExpantionButton {
+                button {
+                    color: white;
+                    background-color: #4641d3;
+                }
+            }
+            .salaryContainer {
+                p {
+                    color: #4641d3;
+                }
+            }
+        }
+        .jobDescription {
+            ul li {
+                color:#4641d3;
+            }
+            .applybutton{
+                button{
+                    color: white;
+                    background-color: #4641d3;
+                }
+            }
+        }
+    }
+}

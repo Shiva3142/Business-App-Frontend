@@ -40,7 +40,7 @@ function Header() {
                         </NavLink>
                     </div>
                     <nav className="desktopNav">
-                        <NavLink to="/service">Services</NavLink><a href="#techstack">Tech-Stack</a><NavLink to="/about">About Us</NavLink><a href="#career">Career</a><a href="#contact">Contac Us</a>
+                        <NavLink to="/service">Services</NavLink><a href="#techstack">Tech-Stack</a><NavLink to="/about">About Us</NavLink><NavLink to="/career">Career</NavLink><NavLink to="/contact">Contac Us</NavLink>
                     </nav>
                     <div className="themeTogglebutton">
                         <Button onClick={ToggleDarkMode} id='togglebutton'>Light Mode</Button>
@@ -51,7 +51,7 @@ function Header() {
                     <nav id="mobileNav">
                         <ClearIcon id="hideNavBar" onClick={toggleNavbar} />
                         <div className="links">
-                            <NavLink to="/service">Services</NavLink><a href="#techstack">Tech-Stack</a><NavLink to="/about">About Us</NavLink><a href="#career">Career</a><a href="#contact">Contac Us</a>
+                            <NavLink to="/service">Services</NavLink><a href="#techstack">Tech-Stack</a><NavLink to="/about">About Us</NavLink><NavLink to="/career">Career</NavLink><NavLink to="/contact">Contac Us</NavLink>
                         </div>
                     </nav>
                 </header>

@@ -10,18 +10,18 @@
         // width: 100%;
         align-items: flex-start;
         h1{
-            font-size: 1.5em;
-            margin-bottom: -100px ;
+            font-size: 1.4em;
+            margin-bottom: -80px ;
         }
         h2 {
-            font-size: 1.6em;
+            font-size: 1.5em;
         }
     }
-    @media screen and (max-width: $mobile_limit) {
+    @media screen and (max-width: $medium_width) {
         min-height: 50vh;
         .containerHeadings{
             h1{
-            margin-top: -30px;
+            margin-bottom: -30px;
             }
         }
     }

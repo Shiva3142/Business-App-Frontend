@@ -1,0 +1,79 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+
+
+
+
+.ContactOptionsContainer{
+    margin: 50px 0  ; 
+    @include content-between;
+    // justify-content: space-evenly;
+
+
+
+
+
+
+    .ContactCard{
+        margin: 10px;
+        padding: 50px 30px;
+        padding-bottom: 20px;
+        @include content-center;
+        flex-direction: column ;
+        box-shadow: 10px 10px 10px 10px #4641D347;
+        border-radius: 30px;
+        max-width: 340px;
+        min-height: 350px;
+        background: white;
+        img{
+            max-width: 60px;
+
+        }
+        h2{
+            margin: 20px;
+            color: black;
+        }
+        p{
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            font-size: 1em;
+            color: #929090;
+            width: 90%;
+            margin: 10px;
+            text-align: center;
+        }
+        a,button{
+            margin: 20px 0;
+            margin-bottom: 0;
+        }
+        a{
+            color: #4641D3;
+            text-decoration: underline;
+        }
+        button{
+            width: 100%;
+            padding: 15px;
+            border-radius: 20px;
+            background-color: #4641D3;
+        }
+    }
+    @media screen and (max-width:$medium_width) {
+        justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    }
+}
+
+
+.dark{
+    .ContactOptionsContainer{
+        .ContactCard{
+            img{
+            }
+            a{
+                color: #4641D3;
+            }
+        }
+    }
+}
