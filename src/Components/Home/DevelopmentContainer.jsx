@@ -5,9 +5,7 @@ import GameImage from '../../Assets/game.png'
 function DevelopmentContainer() {
     return (
         <Container>
-
-        <div className='ServicesContainer'>
-
+        <div className='ServicesContainer' style={{opacity:"1"}}>
             <div className="DevelopmentContainer">
                 <div className="service" style={{ background: "#FCDDE1" }}>
                     <div className="description">

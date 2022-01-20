@@ -18,12 +18,18 @@
     .aboutDetail {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        @media screen and (max-width:$medium_width){
+        @media screen and (max-width: $medium_width) {
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .image {
+            position: relative;
+            right: -500px;
+            transition: all 3s ease-in;
+            @media screen and (max-width: $medium_width) {
+                right: 0px;
+            }
             img {
                 float: right;
                 // max-width: 70vw;
@@ -34,6 +40,12 @@
             }
         }
         .content {
+            position: relative;
+            left: -500px;
+            transition: all 3s ease-in;
+            @media screen and (max-width: $medium_width) {
+                left: 0px;
+            }
             @include content-center;
             flex-direction: column;
             align-items: flex-start;
@@ -57,11 +69,11 @@
                 font-family: Helvetica, sans-serif;
                 color: #7e7e7e;
             }
-            div{
+            div {
                 cursor: pointer;
                 color: #4641d3;
                 @include content-between;
-                svg{
+                svg {
                     margin: 10px;
                 }
             }

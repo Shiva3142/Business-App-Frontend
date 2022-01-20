@@ -3,7 +3,7 @@
 body {
     background-color: black;
     color: white;
-
+    overflow-x: hidden;
     #mobileNav {
         background: white;
         color: black;
@@ -55,4 +55,23 @@ body {
         left: 70%;
         top: 90%;
     }
+}
+
+
+
+.opacityhigh{
+    opacity: 1 !important;
+}
+.scaletohigh{
+    transform: scale(1) !important;
+}
+
+
+
+.leftzero{
+    left: 0 !important;
+}
+
+.rightzero{
+    right: 0 !important;
 }

@@ -67,29 +67,29 @@ function About() {
                     </div>
                     <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     <div className="skillsMeters">
-                        <div class="meterdetails">
-                            <div class="metername">
+                        <div className="meterdetails">
+                            <div className="metername">
                                 <label for="development">DEVELOPMENT</label>
                             </div>
-                            <div class="metervalue">
+                            <div className="metervalue">
                                 <meter id="development" value="0.85">85%</meter>
                                 85%
                             </div>
                         </div>
-                        <div class="meterdetails">
-                            <div class="metername">
+                        <div className="meterdetails">
+                            <div className="metername">
                                 <label for="experience">EXPERIENCE</label>
                             </div>
-                            <div class="metervalue">
+                            <div className="metervalue">
                                 <meter id="experience" value="0.65">65%</meter>
                                 65%
                             </div>
                         </div>
-                        <div class="meterdetails">
-                            <div class="metername">
+                        <div className="meterdetails">
+                            <div className="metername">
                                 <label for="engineering">ENGINEERING</label>
                             </div>
-                            <div class="metervalue">
+                            <div className="metervalue">
                                 <meter id="engineering" value="0.73">73%</meter>
                                 73%
                             </div>

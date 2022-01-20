@@ -5,4 +5,3 @@ build
 .firebaserc
 firebase-debug.log
 package-lock.json
-src/Assets

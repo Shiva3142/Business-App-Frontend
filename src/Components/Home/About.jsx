@@ -11,19 +11,18 @@ function About() {
                 <h2>Know Us & Our Work Ethics</h2>
             </div>
             <div className="aboutDetail">
-                <div className="content">
+                <div className="aboutDetailcontent content">
                     <img src={IdeaImage} alt="" />
                     <h1>Understand Your idea better, execute on point</h1>
                     <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     <div>
                         <span>
-
                             Know More About Us
                         </span>
                         <ArrowForwardIcon />
                     </div>
                 </div>
-                <div className="image">
+                <div className="aboutDetailimage image">
                     <img src={AboutImage} alt="" />
                 </div>
             </div>

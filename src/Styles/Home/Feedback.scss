@@ -1,7 +1,16 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+#HomePageContainer .FeedbackContainer {
+    right: -1000px;
+    transition: all 2s ease-in;
+    @media screen and (max-width: $medium_width) {
+        right: 0px;
+    }
+}
+
 .FeedbackContainer {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -25,8 +34,8 @@
             }
             @media screen and (max-width: $medium_width) {
                 align-items: center;
-                h2{
-                    text-align: center
+                h2 {
+                    text-align: center;
                 }
             }
         }

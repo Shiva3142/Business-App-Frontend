@@ -8,7 +8,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 function Services() {
     return (
         <Container>
-            <div className='ServicesContainer'>
+            <div className='ServicesContainer' id='ServicesContainer'>
                 <div className="containerHeadings">
                     <h1>SERVICES</h1>
                     <h2>COUSTOM GAME DEVELOPEMENT SERVICE</h2>

@@ -6,8 +6,12 @@ import Service from './Components/Service/Service';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Career from './Components/Career/Career';
+import { useEffect } from 'react';
 
 function App() {
+	window.scrollTo(0, 0)
+	useEffect(()=>{
+	},[])
 	return (
 		<>
 			<Routes>

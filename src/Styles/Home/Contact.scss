@@ -1,6 +1,13 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+#HomePageContainer .ContactContainer{
+    transform: scale(0.4);
+    transition: all 2s ease-in;
+    @media screen and (max-width:$medium_width){
+        transform: scale(1);
+    }
+}
 .ContactContainer {
     min-height: 75vh;
     background: #4641d3;

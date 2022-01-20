@@ -1,6 +1,14 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+#HomePageContainer .ServicesContainer{
+    opacity: 0.1;
+    transition: opacity 2s ease-in;
+    @media screen and (max-width:$medium_width){
+        opacity: 1;
+    }
+}
+
 .ServicesContainer {
     .containerHeadings {
         margin: 50px 0;

@@ -13,7 +13,6 @@ function Tech() {
                 <div className="images">
                     <div className="card card1">
                         <img src={ReactIcon} alt="" />
-
                     </div>
                     <div className="card card2">
                         <img src={JavaScriptcon} alt="" />

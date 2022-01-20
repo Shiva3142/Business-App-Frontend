@@ -3,7 +3,7 @@ import { Button, Grid } from '@mui/material'
 import '../../Styles/Home/Contact.scss'
 function Contact() {
     return (
-        <div className='ContactContainer'>
+        <div className='ContactContainer' id='ContactContainer'>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                     <div className='ContactHeader'>

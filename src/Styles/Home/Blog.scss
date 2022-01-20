@@ -1,9 +1,17 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+#HomePageContainer .blogContainer {
+    position: relative;
+    left: -1000px;
+    transition: all 2s ease-in;
+    @media screen and (max-width: $medium_width) {
+        left: 0px;
+    }
+}
 .containerDescription {
     padding: 30px;
-    @media screen and (max-width:$mobile_limit){
+    @media screen and (max-width: $mobile_limit) {
         padding: 10px;
     }
     .smallCard {
@@ -45,8 +53,8 @@
                 margin: 20px 0;
                 font-size: 1.5em;
             }
-            p{
-                color: #5F5F5F;
+            p {
+                color: #5f5f5f;
             }
         }
         @media screen and (max-width: $large_size) {
@@ -99,7 +107,7 @@
             background: url("../../Assets/hackathron.jpg");
             background-size: cover;
         }
-        .description{
+        .description {
             padding: 30px;
             span {
                 padding: 5px 10px;
@@ -113,8 +121,8 @@
                 margin: 20px 0;
                 font-size: 1.5em;
             }
-            p{
-                color: #5F5F5F;
+            p {
+                color: #5f5f5f;
             }
         }
     }
