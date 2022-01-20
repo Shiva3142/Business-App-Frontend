@@ -6,8 +6,12 @@ import Footer from '../Templates/Footer'
 import Header from '../Templates/Header'
 import ContactForm from './ContactForm'
 import ContactOptions from './ContactOptions'
+import { motion } from "framer-motion"
+
 function Contact() {
     return (
+        <motion.div initial={{y:"100vh"}} animate={{y:"0"}} exit={{y:"100vh"}}>
+
         <div className='ContactPageContainer'>
             <div className="bubbleContainer HomeServiceContainer">
                 <Header />
@@ -32,6 +36,7 @@ function Contact() {
             <PartnersContainer/>
             <Footer/>
         </div>
+        </motion.div>
     )
 }
 

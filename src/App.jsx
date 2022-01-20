@@ -7,13 +7,14 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Career from './Components/Career/Career';
 import { useEffect } from 'react';
+import { AnimatePresence } from "framer-motion"
 
 function App() {
 	window.scrollTo(0, 0)
 	useEffect(()=>{
 	},[])
 	return (
-		<>
+		<><AnimatePresence>
 			<Routes>
 				<Route exact path="/" element={<HomePage />}/>
 				<Route exact path="/service" element={<Service />}/>
@@ -21,6 +22,7 @@ function App() {
 				<Route exact path="/contact" element={<Contact />}/>
 				<Route exact path="/career" element={<Career />}/>
 			</Routes>
+		</AnimatePresence>
 		</>
 	);
 }

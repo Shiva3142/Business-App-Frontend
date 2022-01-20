@@ -7,9 +7,12 @@ import Footer from '../Templates/Footer'
 import '../../Styles/Service/Service.scss'
 import GameImage from '../../Assets/game.png'
 import PartnersContainer from './PartnersContainer'
+import { motion } from "framer-motion"
 
 function Service() {
     return (
+        <motion.div initial={{width:"0"}} animate={{width:"auto"}} exit={{width:"0"}}>
+        
         <div className='ServicePageContainer'>
             <div className="bubbleContainer HomeServiceContainer">
                 <Header />
@@ -60,6 +63,7 @@ function Service() {
             <PartnersContainer/>
             <Footer />
         </div>
+        </motion.div>
     )
 }
 

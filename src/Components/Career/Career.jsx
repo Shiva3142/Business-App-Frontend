@@ -6,8 +6,12 @@ import Footer from '../Templates/Footer'
 import Header from '../Templates/Header'
 import CareerContainer from './CareerContainer'
 import Contactus from './Contactus'
+import { motion } from "framer-motion"
+
 function Career() {
     return (
+        <motion.div initial={{x:"100vw"}} animate={{x:"0"}} exit={{x:"100vw"}}>
+
         <div className='CareerPageContainer'>
             <div className="bubbleContainer HomeServiceContainer">
                 <Header />
@@ -32,6 +36,8 @@ function Career() {
             <PartnersContainer />
             <Footer />
         </div>
+        </motion.div>
+
     )
 }
 
